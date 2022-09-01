@@ -1,0 +1,18 @@
+version: "3.8"
+
+x-common:
+  &base-image
+  build:
+    dockerfile: Dockerfile
+    context: .
+  image: news-bot_back:latest
+  restart: always
+  env_file:
+    - .env
+
+
+services:
+  tg_bot:
+    build: ./app
+    env_file:
+      - .env

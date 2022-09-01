@@ -1,0 +1,4 @@
+aiogram==2.15
+requests==2.26.0
+aioschedule~=0.5.2
+urllib3~=1.26.8
